@@ -23,17 +23,17 @@ file_obj.close()
 
 # CSV files
 fileconnection = open("olympics.txt", 'r')
- lines = fileconnection.readlines()
- header = lines[0]
- field_names = header.strip().split(',')
- print(field_names)
- for row in lines[1:]:
-     vals = row.strip().split(',')
-     if vals[5] != "NA":
-         print("{}: {}; {}".format(
-                 vals[0],
-                 vals[4],
-                 vals[5]))
+lines = fileconnection.readlines()
+header = lines[0]
+field_names = header.strip().split(',')
+print(field_names)
+for row in lines[1:]:
+    vals = row.strip().split(',')
+    if vals[5] != "NA":
+        print("{}: {}; {}".format(
+                vals[0],
+                vals[4],
+                vals[5]))
 
 # Writing Data to a csv file:
 olympians = [("John Aalberg", 31, "Cross Country Skiing"),
